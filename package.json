@@ -1,0 +1,30 @@
+{
+  "name": "coa-archiver",
+  "version": "1.0.2",
+  "description": "archiver component for coa",
+  "keywords": [
+    "coajs",
+    "coa",
+    "archiver"
+  ],
+  "license": "MIT",
+  "author": "Aex",
+  "homepage": "https://github.com/coajs/coa-archiver",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coajs/coa-archiver.git"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "rm -rf dist && tsc && cp package.json dist",
+    "npm-publish": "yarn build && yarn version --patch && cp package.json README.md dist && cd dist && npm publish"
+  },
+  "dependencies": {
+    "archiver": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/archiver": "^3.1.0",
+    "@types/node": "^14.0.5",
+    "typescript": "^3.9.3"
+  }
+}
