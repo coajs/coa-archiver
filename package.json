@@ -16,15 +16,24 @@
   },
   "scripts": {
     "dev": "tsc -w",
-    "build": "rm -rf dist && tsc && cp package.json dist",
-    "npm-publish": "yarn build && yarn version --patch && cp package.json README.md dist && cd dist && npm publish"
+    "build": "rm -rf dist && tsc && cp package.json *.md dist",
+    "lint": "eslint .",
+    "prettier": "prettier -w ."
   },
   "dependencies": {
-    "archiver": "^4.0.1"
+    "archiver": "^5.3.0"
   },
   "devDependencies": {
-    "@types/archiver": "^3.1.0",
-    "@types/node": "^14.0.5",
-    "typescript": "^3.9.3"
+    "@types/archiver": "^5.1.0",
+    "@types/node": "^15.6.2",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.3.2"
   }
 }
