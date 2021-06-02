@@ -18,7 +18,8 @@
     "dev": "tsc -w",
     "build": "rm -rf dist && tsc && cp package.json *.md dist",
     "lint": "eslint .",
-    "prettier": "prettier -w ."
+    "prettier": "prettier -w .",
+    "sync": "curl -X PUT 'https://npm.taobao.org/sync/coa-archiver?sync_upstream=true'"
   },
   "dependencies": {
     "archiver": "^5.3.0"
