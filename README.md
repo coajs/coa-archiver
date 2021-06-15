@@ -29,9 +29,9 @@ yarn add coa-archiver
 import { archiver } from 'coa-archiver'
 
 // 将 src1.txt src2.txt 压缩到 dist.zip
-await archiver.zip(['src1.txt', 'src2.txt'], 'dist.zip', 9)
+await archiver.zip(['src1.txt', 'src2.txt'], 'dist.zip')
 
-// 设置压缩级别为9，压缩级别默认为9，数字越高压缩率越大
+// 设置压缩级别为8，压缩级别默认为9，数字越高压缩率越大
 await archiver.zip(['*.txt'], 'dist.zip', 8)
 
 // 压缩文件后将源文件删除
